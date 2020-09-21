@@ -1,0 +1,39 @@
+<div *ngIf = "!postEffectue">
+    <mat-card class="example-card">
+        <mat-card-header>
+          
+          <mat-card-title>{{data.nom}}</mat-card-title>
+        </mat-card-header>
+        <div class = "imageContainer">
+        <img mat-card-image src="{{data.urlPhoto}}" alt="">
+      </div>
+        <mat-card-actions>
+            
+    <div class = "tabValidation">
+        
+  
+            <button  mat-raised-button   *ngIf = "!postEffectue" (click) = "plusPetit()">aggrandir</button>
+        <button   mat-raised-button  *ngIf = "!postEffectue" (click) = "plusGrand()">réduire</button>
+    </div>    
+    </mat-card-actions>
+   
+    </mat-card>
+
+
+<div  class = "ligne" *ngFor = "let i of tableauVue">
+    <div  class = "case" *ngFor = "let j of i" 
+    [ngStyle] = "{'background-color' : j.value===1?'black':'white'}"
+    (click)="clickCase(j)">
+  
+    </div>
+  </div>
+
+</div>
+<div class = "tabValidation">
+    
+  <button  mat-raised-button color="primary" *ngIf = "!postEffectue" (click) = " postNouvelStructure()" >Valider</button>
+</div>
+
+  <p *ngIf = "postEffectue"> Merci pour votre contribution :) </p>
+  <button  mat-raised-button color="primary" *ngIf = "postEffectue" [mat-dialog-close]="data">OK</button>
+ 

@@ -1,0 +1,202 @@
+.ligne{
+    display:flex;
+    
+}
+
+.case{
+    width: 50px;
+    height: 10px;
+    border-width:thin;
+    border-top:solid;
+    border-left:solid;
+    border:solid;
+}
+
+.panel-bouttons{
+   width: 100%;
+   height: 15%;
+  border-top : solid;
+text-align: center;
+}
+
+.mat-raised-button{
+    margin : 20px;
+    height: 80%;
+    width: 100%;
+}
+.iisCalculating{
+  height: 100%;
+  width: 50%;
+  display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.isCalculating{
+  height: 100%;
+  width: 30%;
+  display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+
+
+
+  .mat-drawer{
+    width: 15%;
+  }
+
+  .mat-toolbar{
+    height: 10%;
+  }
+
+
+
+  .imageContainer {
+    position: relative;
+    width: 100%;
+    padding-bottom: 95%;
+    float: left;
+    height: 0;
+  }
+  
+  
+  
+  .mat-card-image {
+
+    margin: 0 0 0 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top:20px;
+  }
+
+  mat-panel-title{
+    font-size: 1.2em;
+  }
+  
+  .mat-raised-button{
+    font-size: 1.5em;
+  }
+  h1{
+    text-align: center;
+    font-size: 2em;
+    width: 100%;
+  }
+  .mat-card-actions{
+    height: 20%;
+    display: block;
+    text-align: center;
+  }
+  .mat-button{
+    font-size: 0.5em;
+    text-align: center;
+    height: 100%;
+    width: 3%;
+  }
+  
+  .example-card {
+    width: 80%;
+    margin: 10px;
+    margin-left: 0;
+  }
+  .example-container {
+    width: 100%;
+    height: 80%;
+    margin: 10px;
+    border: 1px solid #555;
+  }
+  .mat-expansion-panel{
+    padding-left: 0;
+  }
+  .mat-card-title{
+    font-size: 1.5em;
+  }
+  .mat-sidenav{
+    width: 300px;
+  }
+
+
+  .burger{
+    height: 50px;
+    width: 50px;
+  }
+  
+  @media (max-width: 800px) {
+    h1{
+      font-size: 1.5em;
+    }
+    .mat-card-title{
+      font-size: 1.2em;
+    }
+    .mat-panel-title{
+      font-size: 0.8em;
+    }
+    .mat-raised-button{
+      font-size: 1em;
+    }
+    .mat-drawer{
+      width: 20%;
+    }
+    .mat-button{
+      font-size: 0.6em;
+    }
+    .example-card {
+      max-width: 200px;
+    }
+    .burger{
+      height: 10 px;
+      width: 10 px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    h1{
+      font-size: 1.2em;
+    }
+    .mat-card-title{
+      font-size: 1em;
+    }
+    .mat-panel-title{
+      font-size: 0.5em;
+    }
+    .mat-raised-button{
+      font-size: 0.8em;
+    }
+    .mat-drawer{
+      width: 25%;
+    }
+    .mat-button{
+      font-size: 0.4em;
+    }
+    .example-card {
+      max-width: 100px;
+    }
+  }
+  @media (max-width: 300px) {
+    h1{
+      font-size: 1em;
+    }
+    .mat-card-title{
+      font-size: 0.8em;
+    }
+    .mat-panel-title{
+      font-size: 0.4em;
+    }
+    .mat-raised-button{
+      font-size: 0.6em;
+    }
+    .mat-drawer{
+      width: 30%;
+    }
+    .mat-button{
+      font-size: 0.3em;
+    }
+    
+  }
+  

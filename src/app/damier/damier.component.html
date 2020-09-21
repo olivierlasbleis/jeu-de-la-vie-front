@@ -1,0 +1,66 @@
+<mat-toolbar color = "primary">
+  <img class ="burger" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/220px-Hamburger_icon.svg.png" alt="" (click) = "openSidenav()">
+  <h1>JEU DE LA VIE</h1>
+</mat-toolbar>
+
+
+<mat-drawer-container class="example-container">
+  <mat-drawer mode="side" #sidenav [(opened)]="opened" >
+    
+
+    <h1>Placer une structure</h1>
+      <mat-accordion>
+        
+      <mat-expansion-panel hideToggle *ngFor = "let typeStructure of typeStructures">
+        <mat-expansion-panel-header hideToggle (click)="selectStructure(typeStructure)">
+          <mat-panel-title>
+            {{typeStructure}}
+          </mat-panel-title>
+          
+          
+        </mat-expansion-panel-header>
+        
+      <mat-card class="example-card"  *ngFor = "let structure of structures">
+        <mat-card-header>
+          
+          <mat-card-title>{{structure.nom}}</mat-card-title>
+        </mat-card-header>
+        <div class = "imageContainer">
+        <img mat-card-image src="{{structure.urlPhoto}}" alt="" (click) = "enregistrerElement(structure)">
+      </div>
+        <mat-card-actions>
+          <button mat-button (click) = "enregistrerElement(structure)">PLACER</button>
+          <button mat-button (click) = "signalerElement(structure)">SIGNALER</button>
+        </mat-card-actions>
+      </mat-card>
+      </mat-expansion-panel>
+      
+    </mat-accordion>
+  </mat-drawer>
+  <mat-drawer-content>
+    <div class = "ligne" *ngFor = "let i of tableauVue">
+    <div  class = "case" *ngFor = "let j of i" 
+    [ngStyle] = "{'background-color' : j.value===1?'black':'white'}"
+    (click)="clickCase(j)">
+  
+    </div>
+  </div>
+<div class = "panel-bouttons">
+  <div class = "iisCalculating" *ngIf = "!isCalculating">
+  <button mat-raised-button color="primary" *ngIf = "!isCalculating" (click) = "getNextSituationIndex()">DEMARRER LE JEU DE LA VIE</button>
+</div>
+  <div class = "isCalculating"  *ngIf = "isCalculating">
+  <button mat-raised-button color="primary" (click) = "stopCalculating()">STOP</button>
+
+  
+  <mat-slider value="500"   tickInterval="1" (change)="updateSetting($event)" min="100" max="1000" step="50" ></mat-slider>
+</div>
+
+  
+</div> 
+</mat-drawer-content>
+</mat-drawer-container>
+
+
+
+

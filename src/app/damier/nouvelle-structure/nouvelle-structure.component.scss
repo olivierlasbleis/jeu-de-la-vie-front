@@ -1,0 +1,49 @@
+.ligne{
+    display:flex;
+    
+    height: 30px;
+    width: 100%;
+    
+}
+.case{
+    width: 30px;
+    border-width:thin;
+    border-top:solid;
+    border-left:solid;
+}
+
+.example-card {
+    margin: 10px;
+  }
+
+  .imageContainer {
+    position: relative;
+    width: 100%;
+    padding-bottom: 95%;
+    float: left;
+    height: 0;
+  }
+  
+  .mat-card{
+      border:solid;
+  }
+  
+  .mat-card-image {
+
+    
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top:20px;
+  }
+
+  .tabValidation{
+      text-align: center;
+      border: solid;
+  }
+
+  .mat-raised-button{
+      margin-top : 10px;
+      margin-left : 10px;
+  }
