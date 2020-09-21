@@ -37,14 +37,14 @@ panelOpenState = false;
 typeStructures : string[] = [];
 structureCourante : Structure;
 xpandStatus = false;
-opened :boolean = true;
+opened :boolean = false;
 
 ngOnInit(): void {
   this.structureService.getAllTypeStructure().subscribe(typeStructures => this.typeStructures = typeStructures)
   this.tableauPost.listeIndex = [] 
   this.tableauPost.tailleTableau = {} as TailleTableau;
-  this.tableauPost.tailleTableau.x = 40;
-  this.tableauPost.tailleTableau.y = 40;
+  this.tableauPost.tailleTableau.x = 30;
+  this.tableauPost.tailleTableau.y = 88;
     for (let i = 0; i < this.tableauPost.tailleTableau.x; i++) {
       this.tableauVueVide.push([])
       for (let j = 0; j < this.tableauPost.tailleTableau.y; j++) {
