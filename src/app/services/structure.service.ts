@@ -11,8 +11,7 @@ export class StructureService {
 
   httpOptions = {
     headers: new HttpHeaders({
-      'Access-Control-Allow-Origin':'*',
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
     })
   };
 
