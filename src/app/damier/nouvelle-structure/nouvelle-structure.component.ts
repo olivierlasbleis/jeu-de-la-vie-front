@@ -4,7 +4,7 @@ import Index from '../../models/Index';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { StructureService } from 'src/app/services/structure.service';
 import Structure from 'src/app/models/Structure';
-
+import {cloneDeep} from 'lodash';
 
 @Component({
   selector: 'app-nouvelle-structure',
@@ -32,23 +32,31 @@ export class NouvelleStructureComponent implements OnInit {
   }
 
   plusPetit(){
+    let tableauVuePrecedent : Case[][] = cloneDeep(this.tableauVue);
     let longeurTableauVuePrecedent : number = this.tableauVue[0].length;
     this.tableauVue = [];
     for (let i = 0; i < longeurTableauVuePrecedent - 1; i++) {
       this.tableauVue.push([])
       for (let j = 0; j < longeurTableauVuePrecedent - 1; j++) {
-        this.tableauVue[i].push({'index' : {'i':i,'j':j},'value':0});
+        this.tableauVue[i].push({'index' : {'i':i,'j':j},'value':tableauVuePrecedent[i][j].value});
       }
     }
+    
   }
 
   plusGrand(){
+    let tableauVuePrecedent : Case[][] = cloneDeep(this.tableauVue);
     let longeurTableauVuePrecedent : number = this.tableauVue[0].length;
     this.tableauVue = [];
     for (let i = 0; i < longeurTableauVuePrecedent + 1; i++) {
       this.tableauVue.push([])
       for (let j = 0; j < longeurTableauVuePrecedent + 1; j++) {
-        this.tableauVue[i].push({'index' : {'i':i,'j':j},'value':0});
+        if (tableauVuePrecedent.length>i && tableauVuePrecedent[i].length>j) {
+          this.tableauVue[i].push({'index' : {'i':i,'j':j},'value':tableauVuePrecedent[i][j].value});
+         
+        }else{
+          this.tableauVue[i].push({'index' : {'i':i,'j':j},'value':0});
+        }
       }
     }
   }

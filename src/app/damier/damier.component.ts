@@ -43,7 +43,7 @@ ngOnInit(): void {
   this.structureService.getAllTypeStructure().subscribe(typeStructures => this.typeStructures = typeStructures)
   this.tableauPost.listeIndex = [] 
   this.tableauPost.tailleTableau = {} as TailleTableau;
-  this.tableauPost.tailleTableau.x = 30;
+  this.tableauPost.tailleTableau.x = 25;
   this.tableauPost.tailleTableau.y = 88;
     for (let i = 0; i < this.tableauPost.tailleTableau.x; i++) {
       this.tableauVueVide.push([])

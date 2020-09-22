@@ -94,7 +94,7 @@ text-align: center;
     text-align: center;
   }
   .mat-button{
-    font-size: 0.5em;
+    font-size: 0.8em;
     text-align: center;
     height: 100%;
     width: 3%;
@@ -126,10 +126,17 @@ text-align: center;
     height: 50px;
     width: 50px;
   }
+  .mat-drawer{
+    width : 500px;
+  }
+  
   
   @media (max-width: 800px) {
     h1{
       font-size: 1.5em;
+    }
+    .mat-drawer{
+      width : 400px;
     }
     .mat-card-title{
       font-size: 1.2em;
@@ -140,11 +147,8 @@ text-align: center;
     .mat-raised-button{
       font-size: 1em;
     }
-    .mat-drawer{
-      width: 20%;
-    }
     .mat-button{
-      font-size: 0.6em;
+      font-size: 0.8em;
     }
     .example-card {
       max-width: 200px;
@@ -159,6 +163,9 @@ text-align: center;
     h1{
       font-size: 1.2em;
     }
+    .mat-drawer{
+      width : 250px;
+    }
     .mat-card-title{
       font-size: 1em;
     }
@@ -168,11 +175,8 @@ text-align: center;
     .mat-raised-button{
       font-size: 0.8em;
     }
-    .mat-drawer{
-      width: 25%;
-    }
     .mat-button{
-      font-size: 0.4em;
+      font-size: 0.6em;
     }
     .example-card {
       max-width: 100px;
@@ -181,6 +185,9 @@ text-align: center;
   @media (max-width: 300px) {
     h1{
       font-size: 1em;
+    }
+    .mat-drawer{
+      width : 200px;
     }
     .mat-card-title{
       font-size: 0.8em;
@@ -191,11 +198,8 @@ text-align: center;
     .mat-raised-button{
       font-size: 0.6em;
     }
-    .mat-drawer{
-      width: 30%;
-    }
     .mat-button{
-      font-size: 0.3em;
+      font-size: 0.5em;
     }
     
   }

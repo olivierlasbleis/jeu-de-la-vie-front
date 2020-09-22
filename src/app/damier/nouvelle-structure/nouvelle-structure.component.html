@@ -9,17 +9,12 @@
       </div>
         <mat-card-actions>
             
-    <div class = "tabValidation">
         
-  
-            <button  mat-raised-button   *ngIf = "!postEffectue" (click) = "plusPetit()">aggrandir</button>
-        <button   mat-raised-button  *ngIf = "!postEffectue" (click) = "plusGrand()">réduire</button>
-    </div>    
     </mat-card-actions>
    
     </mat-card>
-
-
+<div class = "">
+<div class = "grille">
 <div  class = "ligne" *ngFor = "let i of tableauVue">
     <div  class = "case" *ngFor = "let j of i" 
     [ngStyle] = "{'background-color' : j.value===1?'black':'white'}"
@@ -27,7 +22,14 @@
   
     </div>
   </div>
-
+</div>
+  <div class = "tabValidation">
+        
+  
+    <button  mat-raised-button   *ngIf = "!postEffectue" (click) = "plusPetit()">réduire</button>
+<button   mat-raised-button  *ngIf = "!postEffectue" (click) = "plusGrand()">aggrandir</button>
+</div>
+</div>
 </div>
 <div class = "tabValidation">
     
